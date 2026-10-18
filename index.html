@@ -3,395 +3,413 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoHaus — Concesionario Premium</title>
-  
+  <title>AutoHaus — Concesionario en Quito</title>
+  <meta name="description" content="Vehículos nuevos y seminuevos certificados en Quito. Financiamiento a tu medida y citas en línea.">
+  <meta name="theme-color" content="#000000">
+
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@200;300;400&display=swap" rel="stylesheet">
+
   <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">AUTO<span>HAUS</span></a>
-  <ul class="nav-links">
-    <li><a href="#inventario" class="active">Inventario</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-  <button class="nav-cta" onclick="scrollToContact()">Agendar Cita</button>
-</nav>
+<!-- HEADER -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo" aria-label="AutoHaus, inicio">
+      <span class="logo-mark" aria-hidden="true"></span>AUTOHAUS
+    </a>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-line"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-content">
-    <div class="hero-label">Concesionario Premium</div>
-    <h1>Encuentra tu<br><em>próximo vehículo</em><br>ideal</h1>
-    <p class="hero-desc">
-      Más de 200 vehículos seleccionados con los más altos estándares de calidad. 
-      Nuevos y seminuevos certificados. Financiamiento a tu medida.
-    </p>
-    <div class="hero-actions">
-      <a href="#inventario" class="btn-primary">Ver Inventario</a>
-      <button class="btn-outline" onclick="scrollToContact()">Agendar Visita</button>
+    <nav class="main-nav" id="main-nav" aria-label="Principal">
+      <a href="#inventario">Inventario</a>
+      <a href="#financiamiento">Financiamiento</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+593999000111" class="header-phone">+593 999 000 111</a>
+      <a href="#contacto" class="btn btn-primary btn-sm">Agendar cita</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span>
+      </button>
     </div>
   </div>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-number">200+</div>
-      <div class="hero-stat-label">Vehículos</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-stage" id="hero-feature" aria-hidden="true">
+    <!-- Vehículo destacado generado por JS -->
+  </div>
+  <div class="container hero-copy">
+    <p class="eyebrow">Nuevos y seminuevos certificados · Quito</p>
+    <h1>Encuentra el vehículo<br>que te mueve.</h1>
+    <p class="hero-lead">
+      Más de 200 vehículos inspeccionados, precios transparentes y financiamiento a tu medida.
+    </p>
+    <div class="hero-actions">
+      <a href="#inventario" class="btn btn-primary">Explorar inventario</a>
+      <a href="#contacto" class="btn btn-ghost">Agendar prueba de manejo</a>
     </div>
-    <div class="hero-stat">
-      <div class="hero-stat-number">15</div>
-      <div class="hero-stat-label">Marcas</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-number">98%</div>
-      <div class="hero-stat-label">Satisfacción</div>
-    </div>
+  </div>
+  <a href="#busqueda" class="hero-scroll" aria-label="Bajar">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+  </a>
+</section>
+
+<!-- BÚSQUEDA RÁPIDA -->
+<section class="search-band" id="busqueda">
+  <div class="container">
+      <form class="quick-search" id="quick-search">
+        <label class="qs-field">
+          <span>Marca</span>
+          <select id="qs-brand"><option value="">Todas</option></select>
+        </label>
+        <label class="qs-field">
+          <span>Categoría</span>
+          <select id="qs-type"><option value="">Todas</option></select>
+        </label>
+        <label class="qs-field">
+          <span>Precio máx.</span>
+          <select id="qs-price">
+            <option value="">Sin límite</option>
+            <option value="30000">$30.000</option>
+            <option value="45000">$45.000</option>
+            <option value="60000">$60.000</option>
+            <option value="80000">$80.000</option>
+          </select>
+        </label>
+        <button type="submit" class="btn btn-primary qs-submit">Buscar vehículos</button>
+      </form>
+    <dl class="stats">
+      <div><dt>Vehículos</dt><dd>200+</dd></div>
+      <div><dt>Marcas</dt><dd>15</dd></div>
+      <div><dt>Satisfacción</dt><dd>98%</dd></div>
+      <div><dt>Respuesta</dt><dd>&lt;1 h</dd></div>
+    </dl>
   </div>
 </section>
 
 <!-- INVENTARIO -->
-<section id="inventario">
-  <div class="reveal">
-    <div class="section-label">Catálogo</div>
-    <h2>Inventario Disponible</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="inventory-layout">
-    <!-- FILTROS -->
-    <aside class="filters-panel reveal">
-      <div class="filter-title">Filtrar por</div>
-
-      <div class="filter-group">
-        <div class="filter-group-label">Condición</div>
-        <div class="filter-options">
-          <label class="filter-option">
-            <input type="checkbox" checked onchange="applyFilters()">
-            <span>Nuevo</span><span class="filter-count">48</span>
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" checked onchange="applyFilters()">
-            <span>Seminuevo</span><span class="filter-count">124</span>
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" checked onchange="applyFilters()">
-            <span>Certificado</span><span class="filter-count">67</span>
-          </label>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-group-label">Marca</div>
-        <div class="filter-options">
-          <label class="filter-option">
-            <input type="checkbox" onchange="applyFilters()">
-            <span>Toyota</span><span class="filter-count">32</span>
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" onchange="applyFilters()">
-            <span>BMW</span><span class="filter-count">18</span>
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" onchange="applyFilters()">
-            <span>Mercedes-Benz</span><span class="filter-count">22</span>
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" onchange="applyFilters()">
-            <span>Audi</span><span class="filter-count">15</span>
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" onchange="applyFilters()">
-            <span>Mazda</span><span class="filter-count">27</span>
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" onchange="applyFilters()">
-            <span>Honda</span><span class="filter-count">31</span>
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" onchange="applyFilters()">
-            <span>Ford</span><span class="filter-count">24</span>
-          </label>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-group-label">Categoría</div>
-        <div class="filter-options">
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Sedán</span><span class="filter-count">45</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>SUV / Crossover</span><span class="filter-count">78</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Pickup</span><span class="filter-count">29</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Hatchback</span><span class="filter-count">31</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Coupé</span><span class="filter-count">14</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Eléctrico / Híbrido</span><span class="filter-count">22</span></label>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-group-label">Precio (USD)</div>
-        <div class="range-wrap">
-          <div class="range-values">
-            <span id="price-min-val">$5,000</span>
-            <span id="price-max-val">$150,000</span>
-          </div>
-          <input type="range" id="price-range" min="5000" max="150000" value="150000" step="1000"
-            oninput="document.getElementById('price-max-val').textContent = '$' + Number(this.value).toLocaleString()">
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-group-label">Año</div>
-        <div style="display: flex; gap: 0.5rem;">
-          <select class="filter-select" onchange="applyFilters()">
-            <option>Desde</option>
-            <option>2019</option><option>2020</option><option>2021</option>
-            <option>2022</option><option>2023</option><option>2024</option><option>2025</option>
-          </select>
-          <select class="filter-select" onchange="applyFilters()">
-            <option>Hasta</option>
-            <option>2019</option><option>2020</option><option>2021</option>
-            <option>2022</option><option>2023</option><option>2024</option><option>2025</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-group-label">Transmisión</div>
-        <div class="filter-options">
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Automático</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Manual</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>CVT</span></label>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <div class="filter-group-label">Combustible</div>
-        <div class="filter-options">
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Gasolina</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Diesel</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Eléctrico</span></label>
-          <label class="filter-option"><input type="checkbox" onchange="applyFilters()"><span>Híbrido</span></label>
-        </div>
-      </div>
-
-      <button class="filter-reset" onclick="resetFilters()">Limpiar Filtros</button>
-    </aside>
-
-    <!-- GRID -->
-    <div>
-      <div class="inventory-header reveal">
-        <div class="inventory-count">Mostrando <strong id="car-count">12</strong> vehículos</div>
-        <div style="display: flex; gap: 1rem; align-items: center;">
-          <div class="inventory-sort">
-            <span class="sort-label">Ordenar por</span>
-            <select class="sort-select" onchange="sortCars(this.value)">
-              <option value="featured">Destacados</option>
-              <option value="price-asc">Precio: Menor a Mayor</option>
-              <option value="price-desc">Precio: Mayor a Menor</option>
-              <option value="year-desc">Año: Más Reciente</option>
-              <option value="year-asc">Año: Más Antiguo</option>
-            </select>
-          </div>
-          <div class="view-toggle">
-            <button class="view-btn active" onclick="setView('grid', this)" title="Cuadrícula">⊞</button>
-            <button class="view-btn" onclick="setView('list', this)" title="Lista">☰</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="cars-grid" id="cars-grid">
-        <!-- Cards generadas dinámicamente -->
-      </div>
-
-      <div class="pagination">
-        <button class="page-btn">‹</button>
-        <button class="page-btn active">1</button>
-        <button class="page-btn">2</button>
-        <button class="page-btn">3</button>
-        <button class="page-btn">›</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO / CITAS -->
-<section id="contacto">
-  <div class="reveal">
-    <div class="section-label">Atención al Cliente</div>
-    <h2>Agenda tu Visita</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="contact-grid">
-    <div class="contact-info reveal">
-      <div class="contact-block">
-        <div class="contact-block-title">Llámanos Ahora</div>
-        <a href="tel:+593999000111" class="phone-link">+593 999 000 111</a>
-        <a href="https://wa.me/593999000111?text=Hola,%20me%20interesa%20un%20vehículo" 
-           class="whatsapp-btn" target="_blank">
-          <span class="whatsapp-dot"></span>
-          Escribir por WhatsApp
-        </a>
-        <div class="contact-block-sub" style="margin-top: 0.75rem;">Respuesta inmediata en horario de atención</div>
-      </div>
-
-      <div class="contact-block">
-        <div class="contact-block-title">Visítanos</div>
-        <div class="contact-block-value">Av. Principal 123</div>
-        <div class="contact-block-sub">Quito, Ecuador · Sector Norte</div>
-      </div>
-
-      <div class="contact-block">
-        <div class="contact-block-title">Correo Electrónico</div>
-        <div class="contact-block-value" style="font-size: 1rem;">ventas@autohaus.com</div>
-        <div class="contact-block-sub">Cotizaciones en menos de 2 horas</div>
-      </div>
-
+<section class="section" id="inventario">
+  <div class="container">
+    <div class="section-head reveal">
       <div>
-        <div class="contact-block-title" style="margin-bottom: 0.75rem;">Horario de Atención</div>
-        <div class="hours-grid">
-          <div class="hour-row hour-today">
-            <span class="hour-day">Lun – Vie</span>
-            <span class="hour-time">8:00 – 19:00</span>
-          </div>
-          <div class="hour-row">
-            <span class="hour-day">Sábado</span>
-            <span class="hour-time">9:00 – 17:00</span>
-          </div>
-          <div class="hour-row">
-            <span class="hour-day">Domingo</span>
-            <span class="hour-time hour-closed">Cerrado</span>
-          </div>
-        </div>
+        <p class="kicker">Catálogo</p>
+        <h2>Inventario disponible</h2>
       </div>
+      <label class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <input type="search" id="search" placeholder="Buscar marca o modelo…" aria-label="Buscar marca o modelo">
+      </label>
     </div>
 
-    <!-- FORMULARIO CITA -->
-    <div class="cita-form reveal">
-      <div class="form-title">Solicitar Cita</div>
-      <div class="form-subtitle">Completa el formulario y nos ponemos en contacto contigo en menos de una hora.</div>
+    <div class="type-chips" id="type-chips" role="group" aria-label="Categorías"></div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Nombre Completo *</label>
-          <input type="text" class="form-input" placeholder="Tu nombre" id="f-nombre">
+    <div class="inventory-layout">
+      <!-- FILTROS -->
+      <aside class="filters" id="filters" aria-label="Filtros">
+        <div class="filters-head">
+          <span>Filtros</span>
+          <button class="link-btn" id="filters-reset" type="button">Limpiar</button>
+          <button class="filters-close" id="filters-close" type="button" aria-label="Cerrar filtros">✕</button>
         </div>
-        <div class="form-group">
-          <label class="form-label">Teléfono / WhatsApp *</label>
-          <input type="tel" class="form-input" placeholder="+593 ..." id="f-telefono">
-        </div>
-      </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-input" placeholder="correo@ejemplo.com" id="f-email">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Vehículo de Interés</label>
-          <select class="form-select" id="f-vehiculo">
-            <option value="">Seleccionar modelo...</option>
-            <option>Toyota Corolla 2024</option>
-            <option>BMW Serie 3 2023</option>
-            <option>Mercedes-Benz GLA 2024</option>
-            <option>Mazda CX-5 2024</option>
-            <option>Honda CR-V Híbrido 2024</option>
-            <option>Ford Explorer 2023</option>
-            <option>Otro / No he decidido</option>
-          </select>
-        </div>
-      </div>
+        <div class="filter-group" data-facet="condition"><h3>Condición</h3><div class="filter-options"></div></div>
+        <div class="filter-group" data-facet="brand"><h3>Marca</h3><div class="filter-options"></div></div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Fecha Preferida *</label>
-          <input type="date" class="form-input" id="f-fecha">
+        <div class="filter-group">
+          <h3>Precio máximo</h3>
+          <div class="range-row">
+            <input type="range" id="price-range" step="500" aria-label="Precio máximo">
+            <output id="price-out" for="price-range"></output>
+          </div>
         </div>
-        <div class="form-group">
-          <label class="form-label">Hora Preferida</label>
-          <select class="form-select" id="f-hora">
-            <option>9:00 AM</option>
-            <option>10:00 AM</option>
-            <option>11:00 AM</option>
-            <option>12:00 PM</option>
-            <option>2:00 PM</option>
-            <option>3:00 PM</option>
-            <option>4:00 PM</option>
-            <option>5:00 PM</option>
-          </select>
+
+        <div class="filter-group">
+          <h3>Año</h3>
+          <div class="year-row">
+            <select id="year-min" aria-label="Año desde"></select>
+            <span>—</span>
+            <select id="year-max" aria-label="Año hasta"></select>
+          </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label class="form-label">Tipo de Interés</label>
-        <select class="form-select" id="f-tipo">
-          <option>Compra de vehículo nuevo</option>
-          <option>Compra de vehículo seminuevo</option>
-          <option>Cotización y financiamiento</option>
-          <option>Tasación / venta de mi vehículo</option>
-          <option>Servicio y mantenimiento</option>
-        </select>
-      </div>
+        <div class="filter-group" data-facet="fuel"><h3>Combustible</h3><div class="filter-options"></div></div>
+        <div class="filter-group" data-facet="trans"><h3>Transmisión</h3><div class="filter-options"></div></div>
 
-      <div class="form-group">
-        <label class="form-label">Mensaje o Comentarios</label>
-        <textarea class="form-textarea" placeholder="Cuéntanos más sobre lo que buscas..." id="f-mensaje"></textarea>
-      </div>
+        <button class="btn btn-primary btn-block filters-apply" id="filters-apply" type="button">Ver resultados</button>
+      </aside>
 
-      <button class="form-submit" onclick="submitForm()">Confirmar Cita → </button>
-      <div class="form-success" id="form-success">
-        ✓ ¡Cita solicitada con éxito! Te contactaremos dentro de la próxima hora.
+      <!-- RESULTADOS -->
+      <div class="results">
+        <div class="results-bar">
+          <p class="results-count" aria-live="polite"><strong id="car-count">0</strong> vehículos</p>
+          <div class="results-controls">
+            <button class="btn btn-outline btn-sm filters-open" id="filters-open" type="button">
+              Filtros <span class="badge" id="filters-badge" hidden></span>
+            </button>
+            <select id="sort" class="sort-select" aria-label="Ordenar">
+              <option value="featured">Destacados</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
+              <option value="year-desc">Año: más reciente</option>
+              <option value="km-asc">Kilometraje: menor</option>
+            </select>
+            <div class="view-toggle" role="group" aria-label="Vista">
+              <button type="button" class="active" data-view="grid" aria-label="Cuadrícula">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="6" height="6"/><rect x="9" y="1" width="6" height="6"/><rect x="1" y="9" width="6" height="6"/><rect x="9" y="9" width="6" height="6"/></svg>
+              </button>
+              <button type="button" data-view="list" aria-label="Lista">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="2" width="14" height="3"/><rect x="1" y="7" width="14" height="3"/><rect x="1" y="12" width="14" height="3"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="active-filters" id="active-filters"></div>
+
+        <div class="cars-grid" id="cars-grid"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <p class="empty-title">Ningún vehículo coincide con tu búsqueda.</p>
+          <p>Prueba con menos filtros o escríbenos: conseguimos el auto que buscas.</p>
+          <button class="btn btn-outline" type="button" id="empty-reset">Limpiar filtros</button>
+        </div>
+
+        <nav class="pagination" id="pagination" aria-label="Paginación"></nav>
       </div>
-      <p class="form-note">* Campos requeridos · Tus datos son privados y no serán compartidos</p>
     </div>
   </div>
 </section>
+
+<!-- FINANCIAMIENTO -->
+<section class="section section-dark" id="financiamiento">
+  <div class="container finance">
+    <div class="finance-copy reveal">
+      <p class="kicker">Financiamiento</p>
+      <h2>Calcula tu cuota en segundos.</h2>
+      <p class="muted">
+        Trabajamos con los principales bancos y cooperativas del país. Ajusta los valores y
+        obtén una cuota referencial; te confirmamos la tasa final en tu cita.
+      </p>
+      <ul class="check-list">
+        <li>Aprobación en 24–48 horas</li>
+        <li>Entrada desde el 20%</li>
+        <li>Recibimos tu auto como parte de pago</li>
+      </ul>
+    </div>
+
+    <form class="calc" id="calc" onsubmit="return false">
+      <div class="calc-field">
+        <div class="calc-label"><label for="calc-price">Precio del vehículo</label><output id="calc-price-out"></output></div>
+        <input type="range" id="calc-price" min="10000" max="100000" step="500" value="35000">
+      </div>
+      <div class="calc-field">
+        <div class="calc-label"><label for="calc-down">Entrada</label><output id="calc-down-out"></output></div>
+        <input type="range" id="calc-down" min="20" max="70" step="5" value="30">
+      </div>
+      <div class="calc-field">
+        <span class="calc-label"><span>Plazo</span></span>
+        <div class="segmented" id="calc-term" role="radiogroup" aria-label="Plazo en meses">
+          <button type="button" data-term="24">24</button>
+          <button type="button" data-term="36">36</button>
+          <button type="button" data-term="48" class="active">48</button>
+          <button type="button" data-term="60">60</button>
+          <button type="button" data-term="72">72</button>
+        </div>
+      </div>
+      <div class="calc-field calc-rate">
+        <label for="calc-rate">Tasa anual referencial (%)</label>
+        <input type="number" id="calc-rate" min="0" max="30" step="0.1" value="11.5">
+      </div>
+
+      <div class="calc-result">
+        <span>Cuota mensual estimada</span>
+        <strong id="calc-payment">$0</strong>
+        <small id="calc-summary"></small>
+      </div>
+      <a href="#contacto" class="btn btn-primary btn-block" data-interest="Cotización y financiamiento">Solicitar pre‑aprobación</a>
+    </form>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="section" id="nosotros">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <p class="kicker">Nosotros</p>
+        <h2>Comprar un auto debería ser simple.</h2>
+      </div>
+    </div>
+
+    <div class="features">
+      <article class="feature reveal">
+        <span class="feature-num">150</span>
+        <h3>Puntos de inspección</h3>
+        <p>Cada seminuevo pasa una revisión mecánica completa y se entrega con historial verificado.</p>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-num">12m</span>
+        <h3>Garantía incluida</h3>
+        <p>Motor y caja cubiertos durante el primer año en todos los vehículos certificados.</p>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-num">7d</span>
+        <h3>Devolución sin preguntas</h3>
+        <p>Si en la primera semana no te convence, lo devuelves. Así de seguros estamos.</p>
+      </article>
+      <article class="feature reveal">
+        <span class="feature-num">$0</span>
+        <h3>Tasación de tu auto</h3>
+        <p>Valoramos tu vehículo actual gratis y lo tomamos como parte de pago el mismo día.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section section-tint" id="contacto">
+  <div class="container contact">
+    <div class="contact-info reveal">
+      <p class="kicker">Contacto</p>
+      <h2>Agenda tu visita.</h2>
+      <p class="muted">Te confirmamos la cita en menos de una hora dentro del horario de atención.</p>
+
+      <div class="contact-cards">
+        <a href="https://wa.me/593999000111?text=Hola,%20me%20interesa%20un%20veh%C3%ADculo" class="contact-card contact-wa" target="_blank" rel="noopener">
+          <span class="contact-card-label">WhatsApp</span>
+          <span class="contact-card-value">Escríbenos ahora →</span>
+        </a>
+        <a href="tel:+593999000111" class="contact-card">
+          <span class="contact-card-label">Teléfono</span>
+          <span class="contact-card-value">+593 999 000 111</span>
+        </a>
+        <a href="mailto:ventas@autohaus.com" class="contact-card">
+          <span class="contact-card-label">Correo</span>
+          <span class="contact-card-value">ventas@autohaus.com</span>
+        </a>
+        <div class="contact-card">
+          <span class="contact-card-label">Showroom</span>
+          <span class="contact-card-value">Av. Principal 123, Quito Norte</span>
+        </div>
+      </div>
+
+      <table class="hours" id="hours">
+        <caption>Horario de atención</caption>
+        <tr data-days="1,2,3,4,5"><th>Lunes – Viernes</th><td>8:00 – 19:00</td></tr>
+        <tr data-days="6"><th>Sábado</th><td>9:00 – 17:00</td></tr>
+        <tr data-days="0"><th>Domingo</th><td class="closed">Cerrado</td></tr>
+      </table>
+    </div>
+
+    <form class="booking" id="booking" novalidate>
+      <h3 class="booking-title">Solicitar cita</h3>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="f-nombre">Nombre completo *</label>
+          <input type="text" id="f-nombre" autocomplete="name" required>
+          <span class="field-error">Ingresa tu nombre.</span>
+        </div>
+        <div class="field">
+          <label for="f-telefono">Teléfono / WhatsApp *</label>
+          <input type="tel" id="f-telefono" autocomplete="tel" placeholder="+593 …" required pattern="[+0-9 ()-]{7,}">
+          <span class="field-error">Ingresa un teléfono válido.</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="f-email">Correo electrónico</label>
+          <input type="email" id="f-email" autocomplete="email" placeholder="correo@ejemplo.com">
+          <span class="field-error">Revisa el formato del correo.</span>
+        </div>
+        <div class="field">
+          <label for="f-vehiculo">Vehículo de interés</label>
+          <select id="f-vehiculo"><option value="">Aún no he decidido</option></select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="f-fecha">Fecha preferida *</label>
+          <input type="date" id="f-fecha" required>
+          <span class="field-error">Elige una fecha.</span>
+        </div>
+        <div class="field">
+          <label for="f-hora">Hora preferida</label>
+          <select id="f-hora">
+            <option>9:00</option><option>10:00</option><option>11:00</option><option>12:00</option>
+            <option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Me interesa</span>
+        <div class="pills" id="f-tipo" role="radiogroup" aria-label="Tipo de interés">
+          <label><input type="radio" name="tipo" value="Compra" checked><span>Comprar</span></label>
+          <label><input type="radio" name="tipo" value="Prueba de manejo"><span>Prueba de manejo</span></label>
+          <label><input type="radio" name="tipo" value="Cotización y financiamiento"><span>Financiamiento</span></label>
+          <label><input type="radio" name="tipo" value="Tasación de mi vehículo"><span>Vender mi auto</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-mensaje">Mensaje</label>
+        <textarea id="f-mensaje" rows="3" placeholder="Cuéntanos qué buscas…"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Confirmar cita</button>
+      <p class="form-note">* Campos requeridos. Tus datos son privados y no se comparten.</p>
+
+      <div class="booking-success" id="booking-success" hidden>
+        <span class="success-icon" aria-hidden="true">✓</span>
+        <h3>¡Cita solicitada!</h3>
+        <p id="booking-success-text">Te contactaremos dentro de la próxima hora.</p>
+        <button type="button" class="btn btn-outline" id="booking-again">Agendar otra</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-logo">AUTOHAUS</div>
-  <div class="footer-links">
-    <a href="#">Inicio</a>
-    <a href="#inventario">Inventario</a>
-    <a href="#contacto">Contacto</a>
-    <a href="#">Financiamiento</a>
-    <a href="#">Política de Privacidad</a>
-    <a href="#">Términos y Condiciones</a>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <a href="#top" class="logo logo-light"><span class="logo-mark" aria-hidden="true"></span>AUTOHAUS</a>
+      <p class="footer-tag">Nuevos y seminuevos certificados en Quito.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Pie de página">
+      <a href="#inventario">Inventario</a>
+      <a href="#financiamiento">Financiamiento</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Términos</a>
+    </nav>
   </div>
-  <div class="footer-copy">© 2025 AutoHaus · Todos los derechos reservados · Diseñado para escalar</div>
+  <div class="container footer-copy">
+    <span>© <span id="year"></span> AutoHaus. Todos los derechos reservados.</span>
+    <span>Precios en USD, sujetos a cambio sin previo aviso.</span>
+  </div>
 </footer>
 
 <!-- MODAL DE DETALLE -->
-<div class="modal-overlay" id="car-modal" onclick="closeModal(event)">
-  <div class="modal" id="modal-content">
-    <button class="modal-close" onclick="document.getElementById('car-modal').classList.remove('open')">✕</button>
-    <div class="section-label" id="modal-brand">Marca</div>
-    <h2 id="modal-name" style="font-size: 1.8rem;">Nombre del Vehículo</h2>
-    <div class="modal-grid">
-      <div class="modal-img">
-        <svg viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 38 L20 20 L90 18 L108 36 L115 38 L108 48 L10 48 Z" stroke="white" stroke-width="1.5" fill="none"/>
-          <circle cx="30" cy="48" r="7" stroke="white" stroke-width="1.5" fill="none"/>
-          <circle cx="88" cy="48" r="7" stroke="white" stroke-width="1.5" fill="none"/>
-          <path d="M38 22 L42 20 L70 20 L78 22 L78 34 L38 34 Z" stroke="white" stroke-width="1" fill="none" opacity="0.5"/>
-        </svg>
-      </div>
-      <div class="modal-details" id="modal-details"></div>
-    </div>
-    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-      <button class="btn-primary" style="flex: 1;" onclick="scrollToContact()">Solicitar Cotización</button>
-      <a id="modal-whatsapp" href="#" class="whatsapp-btn" target="_blank">WhatsApp</a>
-    </div>
-  </div>
-</div>
+<dialog class="car-dialog" id="car-modal" aria-labelledby="modal-title">
+  <div class="dialog-body" id="modal-content"></div>
+</dialog>
 
 <!-- Scripts -->
 <script src="config/inventory.js"></script>
